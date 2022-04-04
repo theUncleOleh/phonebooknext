@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class App extends Component {
   state = {
     contacts: [],
@@ -17,6 +18,7 @@ class App extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log(this.state);
   };
 
   render() {
@@ -34,7 +36,8 @@ class App extends Component {
             required
           />
         </label>
-        <label htmlFor="">
+
+        {/* <label htmlFor="">
           Number
           <input
             type="tel"
@@ -45,8 +48,8 @@ class App extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </label>
-        <button type="submit">Send</button>
+        </label> */}
+        <button type="submit">Add contact</button>
       </form>
     );
   }
