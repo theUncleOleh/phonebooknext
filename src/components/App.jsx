@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import nanoid from 'nanoid';
+
 import Form from './Form/Form';
 
-class App extends Component {
+class App extends React.Component {
   state = {
     contacts: [],
   };
