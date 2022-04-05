@@ -4,6 +4,7 @@ class Form extends Component {
   state = {
     name: '',
     number: '',
+    id: '',
   };
 
   handleChange = event => {
@@ -16,6 +17,7 @@ class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.props.onSubmit(this.state);
     console.log(this.state);
   };
 
@@ -35,9 +37,10 @@ class Form extends Component {
           />
         </label>
 
-        {/* <label htmlFor="">
+        <label htmlFor="">
           Number
           <input
+            onSubmit={this.handleSubmit}
             type="tel"
             name="number"
             value={this.state.number}
@@ -46,7 +49,7 @@ class Form extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </label> */}
+        </label>
         <button type="submit">Add contact</button>
       </form>
     );
