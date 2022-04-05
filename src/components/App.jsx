@@ -30,16 +30,21 @@ class App extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
 
-  render() {
-    const normalizeContact = this.state.filter.toLocaleLowerCase();
-    const visibleContact = this.state.contacts.filter(contact =>
+  getVisibleContact = () => {
+    const { filter, contacts } = this.state;
+    const normalizeContact = filter.toLocaleLowerCase();
+    return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizeContact)
     );
+  };
+
+  render() {
+    const visibleContacts = this.getVisibleContact();
     return (
       <div>
         <Form onSubmit={this.addContact} />
         <Filter value={this.state.filter} onChange={this.onChangeFilter} />
-        <ContactList contacts={visibleContact} />
+        <ContactList contacts={visibleContacts} />
       </div>
     );
   }
