@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/phonebooknext/static/css/main.7acaea2f.css",
-    "main.js": "/phonebooknext/static/js/main.84b8589d.js",
+    "main.js": "/phonebooknext/static/js/main.48ed9e12.js",
     "static/js/787.6b7abe35.chunk.js": "/phonebooknext/static/js/787.6b7abe35.chunk.js",
     "index.html": "/phonebooknext/index.html",
     "main.7acaea2f.css.map": "/phonebooknext/static/css/main.7acaea2f.css.map",
-    "main.84b8589d.js.map": "/phonebooknext/static/js/main.84b8589d.js.map",
+    "main.48ed9e12.js.map": "/phonebooknext/static/js/main.48ed9e12.js.map",
     "787.6b7abe35.chunk.js.map": "/phonebooknext/static/js/787.6b7abe35.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.84b8589d.js"
+    "static/js/main.48ed9e12.js"
   ]
 }
