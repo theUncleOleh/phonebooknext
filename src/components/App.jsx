@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Form from './Form/Form';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import s from './App.module.css';
 
 class App extends Component {
   state = {
@@ -26,6 +27,12 @@ class App extends Component {
     }));
   };
 
+  deleteContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
+
   onChangeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
   };
@@ -41,10 +48,13 @@ class App extends Component {
   render() {
     const visibleContacts = this.getVisibleContact();
     return (
-      <div>
+      <div className={s.container}>
         <Form onSubmit={this.addContact} />
         <Filter value={this.state.filter} onChange={this.onChangeFilter} />
-        <ContactList contacts={visibleContacts} />
+        <ContactList
+          contacts={visibleContacts}
+          onDeleteContact={this.deleteContact}
+        />
       </div>
     );
   }
