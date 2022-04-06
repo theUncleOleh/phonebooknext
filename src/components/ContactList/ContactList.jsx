@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Fragment } from 'react';
 import s from './ContactList.module.css';
 
@@ -21,3 +22,14 @@ export default function ContactList({ contacts, onDeleteContact }) {
     </Fragment>
   );
 }
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+};
+

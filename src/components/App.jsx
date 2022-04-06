@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Form from './Form/Form';
 import ContactList from './ContactList/ContactList';
@@ -51,6 +52,7 @@ class App extends Component {
       <div className={s.container}>
         <Form onSubmit={this.addContact} />
         <Filter value={this.state.filter} onChange={this.onChangeFilter} />
+        <span>Общее кол-во: {this.state.contacts.length}</span>
         <ContactList
           contacts={visibleContacts}
           onDeleteContact={this.deleteContact}
@@ -61,3 +63,5 @@ class App extends Component {
 }
 
 export default App;
+
+
