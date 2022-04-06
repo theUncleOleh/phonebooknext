@@ -1,5 +1,4 @@
 import { nanoid } from 'nanoid';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Form from './Form/Form';
 import ContactList from './ContactList/ContactList';
@@ -63,5 +62,3 @@ class App extends Component {
 }
 
 export default App;
-
-
