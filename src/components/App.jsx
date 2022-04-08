@@ -1,10 +1,10 @@
 // import { nanoid } from 'nanoid';
-import React, { Component } from 'react';
+import React from 'react';
 import FormByFormik from './Formik/FormByFormik';
 // import Form from './Form/Form';
 // import ContactList from './ContactList/ContactList';
 // import Filter from './Filter/Filter';
-import s from './App.module.css';
+
 
 export default function App() {
   return <FormByFormik />;
