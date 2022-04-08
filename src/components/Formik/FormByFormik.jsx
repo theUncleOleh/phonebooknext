@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import React, { Component } from 'react';
+import React from 'react';
 
 export default function FormByFormik() {
   return (
@@ -8,7 +8,9 @@ export default function FormByFormik() {
       <h1>Phonebook</h1>
       <Formik
         initialValues={{ name: '', number: '' }}
-        validationSchema={Yup.object()}
+        validationSchema={Yup.object({
+          name: Yup.string(),
+        })}
         // validate={values => {
         //   const errors = {};
         //   if (!values.email) {
