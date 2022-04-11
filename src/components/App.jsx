@@ -1,9 +1,9 @@
 import { nanoid } from 'nanoid';
 import React, { Component } from 'react';
-import FormByFormik from './Formik/FormByFormik';
+import FormByFormik from './Formik';
 // import Form from './Form/Form';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
+import ContactList from './ContactList';
+import Filter from './Filter';
 import s from './App.module.css';
 
 // export default function App() {
